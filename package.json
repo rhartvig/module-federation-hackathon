@@ -1,0 +1,22 @@
+{
+  "name": "dynamic-remotes",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "install:core-client": "npm install --prefix ./core-client",
+    "install:money-widget": "npm install --prefix ./money-widget",
+    "install:axeptia-widget": "npm install --prefix ./axeptia-widget",
+    "install:axeptia-workspace": "npm install --prefix ./axeptia-workspace",
+    "install:modern-widget": "npm install --prefix ./modern-widget",
+    "postinstall": "run-s install:core-client install:money-widget install:axeptia-widget install:axeptia-workspace install:modern-widget",
+    "start:core-client": "npm start --prefix ./core-client",
+    "start:money-widget": "npm start --prefix ./money-widget",
+    "start:axeptia-widget": "npm start --prefix ./axeptia-widget",
+    "start:axeptia-workspace": "npm start --prefix ./axeptia-workspace",
+    "start:modern-widget": "npm start --prefix ./modern-widget",
+    "start": "run-p start:core-client start:money-widget start:axeptia-widget start:axeptia-workspace start:modern-widget"
+  },
+  "devDependencies": {
+    "npm-run-all": "4.1.5"
+  }
+}
